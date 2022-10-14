@@ -19,6 +19,9 @@ def Display_IMG():
 def home():                    
     return render_template("homepage.html")
 
+@app.route("/CPU")                
+def CPU():                    
+    return render_template("CPU.html")
 
                                            
     

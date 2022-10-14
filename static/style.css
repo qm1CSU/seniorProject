@@ -4,4 +4,11 @@ body {
 
 img{
     position: relative;
+    height: 90%;
+    width: 75%;
+}
+
+h1{
+    text-align: center;
+    color: gold;
 }
