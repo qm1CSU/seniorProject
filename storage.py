@@ -1,3 +1,13 @@
+from flask import Flask, render_template, request
+import os           
+app = Flask(__name__)
+
+IMG_FOLDER = os.path.join('static', 'pics')
+
+app.config['UPLOAD_FOLDER'] = IMG_FOLDER
+
+
+
 @app.route("/")
 def Display_IMG():
      storage = os.path.join(app.config['UPLOAD_FOLDER'], 'storage.jpg')
