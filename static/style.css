@@ -6,6 +6,7 @@ img{
     position: relative;
     height: 90%;
     width: 75%;
+    border: 5px solid #555;
 }
 
 h1{

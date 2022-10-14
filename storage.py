@@ -19,6 +19,12 @@ def Display_IMG():
 def home():                    
     return render_template("homepage.html")
 
+@app.route("/CPU")
+def Show_IMG():
+     ryzen = os.path.join(app.config['UPLOAD_FOLDER'], 'ryzen.jpg')
+     return render_template("CPU.html", user_image=ryzen)
+
+
 @app.route("/CPU")                
 def CPU():                    
     return render_template("CPU.html")
