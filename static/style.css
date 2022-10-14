@@ -1,3 +1,7 @@
 body {
     background-color:rgb(0, 174, 255);
 }
+
+img{
+    position: relative;
+}
