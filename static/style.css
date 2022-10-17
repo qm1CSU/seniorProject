@@ -3,7 +3,8 @@ body {
 }
 
 img{
-    position: relative;
+    display: grid;
+    place-items: center;
     height: 90%;
     width: 75%;
     border: 5px solid #555;
