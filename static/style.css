@@ -3,14 +3,30 @@ body {
 }
 
 img{
-    display: grid;
-    place-items: center;
-    height: 90%;
-    width: 75%;
-    border: 5px solid #555;
+   
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+    height: 40%;
 }
 
 h1{
     text-align: center;
     color: gold;
+}
+
+h2{
+    text-align: center;
+    background-color:silver;
+}
+
+h3{
+    text-align: center;
+    background-color:silver;
+    border: 5px solid black;
+    height: 50px;
+    width: 500px;
+    
+    
+    
 }
