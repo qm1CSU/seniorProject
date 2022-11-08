@@ -29,6 +29,10 @@ def Show_IMG():
 def CPU():                    
     return render_template("CPU.html")
 
+
+@app.route("/GPU")                
+def GPU():                    
+    return render_template("GPU.html")
                                            
     
 if __name__== "__main__":

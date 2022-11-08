@@ -11,7 +11,7 @@
     <title>CPU's</title>
   </head>
   <body>
-    <h1>Robert's CPU's In Stock</h1>
+    <h1>Robert's Graphic Cards In Stock</h1>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,18 +19,18 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <a class="nav-link active" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Graphic Cards</a>
+      <a class="nav-link" href="{{url_for('CPU')}}">CPU</a>
       <a class="nav-link" href="#">Ram</a>
       <a class="nav-link" href="#">Power Supply</a>
     </div>
   </div>
 </nav>
     
-  <h2>Ryzen 9 CPU </h2><img src="{{ user_image }}" alt="ryzen cpu">
+  <h2>Nvidia 4090 </h2><img src="{{ user_image }}" alt="ryzen cpu">
   
   <div class = "center">
     
-    <h3>  300 In Stock</h3>
+    <h3>400 In Stock</h3>
     <form action="/action_page.php">
       <label for="order">Amount to order:</label><br>
       <input type="number" id="fname" name="fname" ><br>
