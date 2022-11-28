@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
-import os           
+import os       
+import csv
+
 app = Flask(__name__)
 
 IMG_FOLDER = os.path.join('static', 'pics')
@@ -39,7 +41,26 @@ def Show_IMG():
 def GPU():                    
     return render_template("GPU.html")
 
-
+@app.route("/GPU")
+def readItem():
+    with open('items.csv') as csv_file:
+        data = csv.reader(csv_file, delimeter=',')
+        first_line = True
+        items = []
+        for row in data: 
+            if not first_line: 
+                items.append({
+                "product_id": row[0], 
+                "product_type":row[1], 
+                "product_sku": row[2], 
+                "make": row[3], 
+                "model": row[4], 
+                "price": row[5], 
+                "quantity": row[6]
+                })
+            else: 
+                first_line = False
+        return render_template("GPU.html", items=items) 
 
 @app.route("/ram")
 def view_IMG():
