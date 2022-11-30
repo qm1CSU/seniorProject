@@ -42,12 +42,12 @@ def GPU():
     return render_template("GPU.html")
 
 @app.route("/GPU")
-def readItem():
-    with open('items.csv') as csv_file:
+def readGPU():
+    with open('gpu.csv') as csv_file:
         data = csv.reader(csv_file, delimeter=',')
         first_line = True
-        items = []
-        for row in data: 
+        gpuData = [] 
+        for row in gpuData:   
             if not first_line: 
                 items.append({
                 "product_id": row[0], 
@@ -60,7 +60,7 @@ def readItem():
                 })
             else: 
                 first_line = False
-        return render_template("GPU.html", items=items) 
+        return render_template("GPU.html", gpuData=gpuData)   
 
 @app.route("/ram")
 def view_IMG():
