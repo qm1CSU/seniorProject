@@ -29,24 +29,53 @@
   <h2>Nvidia 4090 </h2><img src="{{ user_image }}" alt="rtx gpu">
  
 
-  <div class = "center">
-    <h3>400 In Stock</h3>
+  <div class = "input-group">
+    <h3>Select Field to Edit</h3>
     <form action="/action_page.php">
-      <label for="order">Amount to order:</label><br>
-      <input type="number" id="fname" name="fname" ><br>
-      <input type="submit" value="Submit">
+      <select class="form select" id="sel1" name="sellist">
+        <option>Product ID</option>
+        <option>Product Type</option>
+        <option>Product SKU</option>
+        <option>Make</option>
+        <option>Model</option>
+        <option>Price</option>
+        <option>Quantity</option> 
+      </select>
+
+        <input type="text" class="form-control" placeholder="Input data here">
+      
+      <button id="submit" type="submit">Submit</button>
     </form>
   </div>
+ 
 
-  {% for item in items %} 
-  <h4>Product Type {{ item.product_type }}</h4>   
-  <p>Make</p>
-  <p>Model</p>
-  <p>Product ID</p>
-  <p>SKU</p>
-  <p>Price</p> 
-  <br/> 
-  {% endfor %}
+  <div class="container mt-3">
+    <table class="table table-striped">
+      <tbody> 
+        <tr>
+          <td>Product ID</td>
+        </tr>
+        <tr>
+          <td>Product Type</td>
+        </tr>
+        <tr>
+          <td>Product SKU</td> 
+        </tr>
+        <tr>
+          <td>Make</td>
+        </tr>
+        <tr>
+          <td>Model</td> 
+        </tr>
+        <tr>
+          <td>Price</td>
+        </tr>
+        <tr>
+          <td>Quantity In Stock</td> 
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
  
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
