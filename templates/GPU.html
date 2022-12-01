@@ -28,10 +28,10 @@
     
   <h2>Nvidia 4090 </h2><img src="{{ user_image }}" alt="rtx gpu">
  
-
-  <div class = "input-group">
-    <h3>Select Field to Edit</h3>
-    <form action="/action_page.php">
+<div class = "container">
+  <h3>Select Field to Edit</h3>
+  <form class="form-inline" action="/updateGPU" method="Post"> 
+    <div class = "form-group"> 
       <select class="form select" id="sel1" name="sellist">
         <option>Product ID</option>
         <option>Product Type</option>
@@ -41,46 +41,36 @@
         <option>Price</option>
         <option>Quantity</option> 
       </select>
-
-        <input type="text" class="form-control" placeholder="Input data here">
-      
-      <button id="submit" type="submit">Submit</button>
-    </form>
-  </div>
+      <input type="text" class="form-control" placeholder="Input data here">
+      <button id="submit" type="submit">Submit</button> 
+    </div>
+  </form>
+</div> 
  
   <div class="container mt-3">
     <table class="table table-striped">
       <tbody>
-        {% for gpu in gpuData %} 
-        <tr>
-          <td>Product ID</td>
-          <td>{{ gpu.product_id }}</td>
+        <tr> 
+          <td> Product ID </td>
         </tr>
-        <tr>
-          <td>Product Type</td>
-          <td>{{ gpu.product_type }}</td> 
+        <tr> 
+          <td> Product Type </td>
         </tr>
-        <tr>
-          <td>Product SKU</td>
-          <td>{{ gpu.product_sku }}</td> 
+        <tr> 
+          <td> Product SKU </td>
         </tr>
-        <tr>
-          <td>Make</td>
-          <td>{{ gpu.make }}</td>
+        <tr> 
+          <td> Make </td>
         </tr>
-        <tr>
-          <td>Model</td>
-          <td>{{ gpu.model }}</td> 
+        <tr> 
+          <td> Model </td>
         </tr>
-        <tr>
-          <td>Price</td>
-          <td>{{ gpu.price }}</td>
+        <tr> 
+          <td> Price </td>
         </tr>
-        <tr>
-          <td>Quantity In Stock</td>
-          <td>{{ gpu.quantity }}</td> 
-        </tr>
-        {% endfor %} 
+        <tr> 
+          <td> Quantity </td> 
+        </tr>  
       </tbody>
     </table>
   </div>
