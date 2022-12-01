@@ -1,8 +1,8 @@
-{"product_id": "004",
- "product_type": "ps", 
- "product_sku": "CCUE750F",
- "make": "corsair",
- "model": "cue cx750f", 
- "price": "109.99", 
- "quantity": "400"
-} 
+field,value
+product_id,004
+product_type,ps 
+product_sku,CCUE750F
+make,corsair
+model,cue cx750f 
+price,109.99 
+quantity,400 
