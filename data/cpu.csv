@@ -1,8 +1,8 @@
-{"product_id": "001", 
- "product_type": "cpu", 
- "product_sku": "RYZCPU09", 
- "make": "ryzan", 
- "model": "ryzan 9", 
- "price": "365.00", 
- "quantity": "300"
-} 
+field,value
+product_id,001 
+product_type,cpu 
+product_sku,RYZCPU09 
+make,ryzan 
+model,ryzan 9 
+price,365.00
+quantity,300 
