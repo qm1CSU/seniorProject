@@ -27,7 +27,9 @@
 </nav>
     
   <h2>Nvidia 4090 </h2><img src="{{ user_image }}" alt="rtx gpu">
- 
+
+<div class = "center"> 
+
 <div class = "container">
   <h3>Select Field to Edit</h3>
   <form class="form-inline" action="/updateGPU" method="Post"> 
@@ -50,27 +52,36 @@
   <div class="container mt-3">
     <table class="table table-striped">
       <tbody>
-        <tr> 
-          <td> Product ID </td>
+        {% for gpu in gpuData %}
+        <tr>  
+          <td>Product ID</td>
+          <td>{{ gpu.product_id }}</td>
         </tr>
         <tr> 
-          <td> Product Type </td>
+          <td>Product Type</td>
+          <td>{{ gpu.product_type }}</td> 
         </tr>
         <tr> 
-          <td> Product SKU </td>
+          <td>Product SKU</td>
+          <td>{{ gpu.product_sku }}</td>
         </tr>
         <tr> 
-          <td> Make </td>
+          <td>Make</td>
+          <td>{{ gpu.make }}</td> 
         </tr>
         <tr> 
-          <td> Model </td>
+          <td>Model</td>
+          <td>{{ gpu.model }}</td>
         </tr>
         <tr> 
-          <td> Price </td>
+          <td>Price</td>
+          <td>{{ gpu.price }}</td>
         </tr>
         <tr> 
-          <td> Quantity </td> 
-        </tr>  
+          <td>Quantity</td>
+          <td>{{ gpu.quantity }}</td>  
+        </tr>
+        {% endfor %}    
       </tbody>
     </table>
   </div>
