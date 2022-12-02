@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import os 
 import csv  
 
-app = Flask(__name__)
+app = Flask(__name__) 
 
 IMG_FOLDER = os.path.join('static', 'pics')
 
@@ -16,6 +16,27 @@ def Display_IMG():
 @app.route("/")                
 def home():                    
     return render_template("homepage.html")
+
+@app.route("/")
+def readGPU():  
+    with open('data/gpu.csv') as file:  
+        data = csv.reader(file, delimiter=',') 
+        first_line = True
+        gpuData = []
+        for row in data: 
+            if not first_line: 
+                gpuData.append({
+                    "product_id": row[0],
+                    "product_type": row[1],
+                    "product_sku": row[2],
+                    "make": row[3],
+                    "model": row[4],
+                    "price": row[5],
+                    "quantity": row[6],
+                })     
+            else:
+                first_line = False
+        return render_template("GPU.html", gpuData=gpuData)
 
 @app.route("/CPU")
 def Open_IMG():
@@ -33,13 +54,7 @@ def Show_IMG():
 
 @app.route("/GPU")                
 def GPU():                    
-    return render_template("GPU.html")
-
-@app.route("/GPU")
-def readGPU(): 
-    with open('data/gpu.csv') as file:  
-        reader = csv.reader(file)   
-        return render_template("GPU.html", csv=reader)      
+    return render_template("GPU.html")         
 
 @app.route("/ram")
 def view_IMG():
