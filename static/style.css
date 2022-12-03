@@ -1,44 +1,36 @@
 body {
-    background-color:rgb(0, 174, 255);
+    background-color:rgb(255, 255, 255); 
 }
 
 img{
-   
     display: block;
     margin: 0 auto;
     width: 40%;
-    height: 40%;
+    height: 40%; 
 }
 
 h1{
     text-align: center;
-    color: gold;
+    color: rgb(0,0,0); 
 }
 
 h2{
     text-align: center;
-    background-color:silver;
+    background-color:rgb(255, 255, 255);  
 }
 
 h3{
     text-align: center;
-    
-    
-    
-    
-    
 }
 
 .center {
     margin: auto;
     width: 60%;
-    border: 5px solid #ff004c;
+    border: 1px solid #0c0205;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: rgb(248, 250, 252);  
     }
 
-
     form{
-        text-align: center;
-       
+        text-align: center;       
     }
