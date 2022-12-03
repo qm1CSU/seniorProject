@@ -1,8 +1,2 @@
-field,value
-product_id,002 
-product_type,gpu 
-product_sku,NVGERT80 
-make,nvidia 
-model,geforce rtx 4090 
-price,749.99 
-quantity,400  
+product_id,product_type,product_sku,make,model,price,quantity
+002,gpu,NVGERT80,nvidia,geforce rtx 4090,749.99,400 
