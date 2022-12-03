@@ -11,7 +11,7 @@
     <title>GPUs</title>
   </head>
   <body>
-    <h1>Robert's Graphic Cards In Stock</h1>
+    <h1>Robert's Graphics Cards In Stock</h1>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,34 +20,33 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <a class="nav-link active" href="{{url_for('home')}}">Home <span class="sr-only">(current)</span></a>
       <a class="nav-link" href="{{url_for('CPU')}}">CPU</a>
-      <a class="nav-link" href="{{url_for('ram')}}">Ram</a>
-      <a class="nav-link" href="{{url_for('ps')}}">Power Supply</a>
+      <a class="nav-link" href="{{url_for('ram')}}">RAM</a>  
+      <a class="nav-link" href="{{url_for('ps')}}">Power Supply</a> 
     </div>
   </div>
 </nav>
     
-  <h2>Nvidia 4090 </h2><img src="{{ user_image }}" alt="rtx gpu">
+<h2>Nvidia 4090</h2><img src="/static/pics/rtx4090.png" alt="rtx gpu"><br/>  
 
 <div class = "center"> 
-
-<div class = "container">
-  <h3>Select Field to Edit</h3>
-  <form class="form-inline" action="/updateGPU" method="Post"> 
-    <div class = "form-group"> 
-      <select class="form select" id="sel1" name="sellist">
-        <option>Product ID</option>
-        <option>Product Type</option>
-        <option>Product SKU</option>
-        <option>Make</option>
-        <option>Model</option>
-        <option>Price</option>
-        <option>Quantity</option> 
-      </select>
-      <input type="text" class="form-control" placeholder="Input data here">
-      <button id="submit" type="submit">Submit</button> 
-    </div>
-  </form>
-</div> 
+  <div class = "container">
+    <h3>Select Field to Edit</h3>
+    <form class="form-inline" action="/updateGPU" method="Post"> 
+      <div class = "form-group"> 
+        <select class="form select" id="sel1" name="sellist">
+          <option>Product ID</option>
+          <option>Product Type</option>
+          <option>Product SKU</option>
+          <option>Make</option>
+          <option>Model</option>
+          <option>Price</option>
+          <option>Quantity</option> 
+        </select>
+        <input type="text" class="form-control" placeholder="Input data here">
+        <button id="submit" type="submit">Submit</button> 
+      </div>
+    </form>
+  </div> 
  
   <div class="container mt-3">
     <table class="table table-striped">
@@ -55,7 +54,7 @@
         {% for gpu in gpuData %}
         <tr>  
           <td>Product ID</td>
-          <td>{{ gpu.product_id }}</td>
+          <td>{{ gpu.product_id }}</td> 
         </tr>
         <tr> 
           <td>Product Type</td>
@@ -85,7 +84,7 @@
       </tbody>
     </table>
   </div>
- 
+</div> 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
