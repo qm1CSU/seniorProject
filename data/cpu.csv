@@ -1,8 +1,2 @@
-field,value
-product_id,001 
-product_type,cpu 
-product_sku,RYZCPU09 
-make,ryzan 
-model,ryzan 9 
-price,365.00
-quantity,300 
+product_id,product_type,product_sku,make,model,price,quantity
+001,cpu,RYZCPU09,ryzan,ryzan 9,365.00,300   
