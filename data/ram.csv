@@ -1,8 +1,2 @@
-field,value
-product_id,003
-product_type,ram 
-product_sku,CRVNDDR6  
-make,corsair  
-model,vengeance ddr6  
-price,134.99 
-quantity,400 
+product_id,product_type,product_sku,make,model,price,quantity
+003,ram,CRVNDDR6,corsair,vengeance ddr6,134.99,400  
