@@ -1,8 +1,2 @@
-field,value
-product_id,004
-product_type,ps 
-product_sku,CCUE750F
-make,corsair
-model,cue cx750f 
-price,109.99 
-quantity,400 
+product_id,product_type,product_sku,make,model,price,quantity
+004,ps,CCUE750F,corsair,cue cx750f,109.99,300  
