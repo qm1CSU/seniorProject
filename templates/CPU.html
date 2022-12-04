@@ -28,10 +28,10 @@
     
 <h2>Ryzen 9 CPU </h2><img src="/static/pics/ryzen.jpg" alt="ryzen cpu"><br/> 
   
-<div class = "center">
+<div class = "center"> 
   <div class = "container">
     <h3>Select Field to Edit</h3>
-    <form class="form-inline" action="/updateCPU" method="Post"> 
+    <form class="form-inline" method="Post" action="/updateCPU">  
       <div class = "form-group"> 
         <select class="form select" id="sel1" name="sellist">
           <option>Product ID</option>
@@ -40,7 +40,7 @@
           <option>Make</option>
           <option>Model</option>
           <option>Price</option>
-          <option>Quantity</option> 
+          <option>Quantity</option>   
         </select>
         <input type="text" class="form-control" placeholder="Input data here">
         <button id="submit" type="submit">Submit</button> 
