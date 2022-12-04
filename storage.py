@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import os 
 import csv  
 
-app = Flask(__name__) 
+app = Flask(__name__)  
 
 IMG_FOLDER = os.path.join('static', 'pics')
 
@@ -38,6 +38,22 @@ def readCPU():
                 first_line = False
         print(cpuData) 
         return render_template("CPU.html", cpuData=cpuData)
+
+@app.route("/updateCPU", methods=["POST"]) 
+def updateCPU():
+        cpuData = request.form 
+        product_id = cpuData["option1"]
+        product_type = cpuData["option2"]
+        product_sku = cpuDataa["option3"]  
+        make = cpuData["option4"]  
+        model = cpuData["option5"]
+        price = cpuData["option6"]
+        quantity = cpuData["option7"]  
+        with open('data/cpu.csv', mode='a') as file:
+            cpuData = csv.writer(file, delimiter=',') 
+            cpuData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
+        print(cpuData)
+        return render_template("CPU.html", cpuData=cpuData)       
 
 @app.route("/CPU")                
 def CPU():                     
