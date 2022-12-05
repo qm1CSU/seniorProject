@@ -39,21 +39,27 @@ def readCPU():
         print(cpuData) 
         return render_template("CPU.html", cpuData=cpuData)
 
-@app.route("/updateCPU", methods=["POST"]) 
-def updateCPU():
-        request.method == "POST"
-        cpuData = dict(request.form) 
-        product_id = cpuData["product_id"] [0]
-        product_type = cpuData["product_type"] [0]
-        product_sku = cpuDataa["product_sku"] [0]  
-        make = cpuData["make"] [0]  
-        model = cpuData["model"] [0]
-        price = cpuData["price"] [0]
-        quantity = cpuData["quantity"] [0]  
-        with open('data/cpu.csv', mode='a') as file:
-            cpuData = csv.writer(file, delimiter=',') 
-            cpuData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
-        print(cpuData)
+@app.route("/updateCPU", methods=['POST'])  
+def updateCPU(): 
+        product_id = request.form['product_id']
+        product_type = request.form['product_type']
+        product_sku = request.form['product_sku']  
+        make = request.form['make'] 
+        model = request.form['model']
+        price = request.form['price']
+        quantity = request.form['quantity'] 
+        with open('data/cpu.csv') as file:
+            data = csv.writer(file, delimiter=',') 
+        for row in data:  
+            cpuData.append({
+                "product_id": row[0],
+                "product_type": row[1],
+                "product_sku": row[2],
+                "make": row[3],
+                "model": row[4],
+                "price": row[5],
+                "quantity": row[6],
+            })
         return render_template("CPU.html", cpuData=cpuData)       
 
 @app.route("/CPU")                
@@ -82,7 +88,7 @@ def readGPU():
         print(gpuData) 
         return render_template("GPU.html", gpuData=gpuData)         
 
-@app.route("/updateCPU", methods=["POST"]) 
+@app.route("/updateGPU", methods=["POST"]) 
 def updateGPU():
         request.method == "POST"
         gpuData = dict(request.form)  
@@ -125,7 +131,7 @@ def readRAM():
         print(ramData) 
         return render_template("ram.html", ramData=ramData) 
 
-@app.route("/updateCPU", methods=["POST"]) 
+@app.route("/updateRAM", methods=["POST"]) 
 def updateRAM():
         request.method == "POST"
         ramData = dict(request.form) 
@@ -168,7 +174,7 @@ def readPS():
         print(psData) 
         return render_template("ps.html", psData=psData) 
 
-@app.route("/updateCPU", methods=["POST"]) 
+@app.route("/updatePS", methods=["POST"]) 
 def updatePS(): 
         request.method == "POST" 
         psData = dict(request.form) 
