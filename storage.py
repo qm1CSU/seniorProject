@@ -41,14 +41,15 @@ def readCPU():
 
 @app.route("/updateCPU", methods=["POST"]) 
 def updateCPU():
-        cpuData = request.form 
-        product_id = cpuData["option1"]
-        product_type = cpuData["option2"]
-        product_sku = cpuDataa["option3"]  
-        make = cpuData["option4"]  
-        model = cpuData["option5"]
-        price = cpuData["option6"]
-        quantity = cpuData["option7"]  
+        request.method == "POST"
+        cpuData = dict(request.form) 
+        product_id = cpuData["product_id"] [0]
+        product_type = cpuData["product_type"] [0]
+        product_sku = cpuDataa["product_sku"] [0]  
+        make = cpuData["make"] [0]  
+        model = cpuData["model"] [0]
+        price = cpuData["price"] [0]
+        quantity = cpuData["quantity"] [0]  
         with open('data/cpu.csv', mode='a') as file:
             cpuData = csv.writer(file, delimiter=',') 
             cpuData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
@@ -81,6 +82,23 @@ def readGPU():
         print(gpuData) 
         return render_template("GPU.html", gpuData=gpuData)         
 
+@app.route("/updateCPU", methods=["POST"]) 
+def updateGPU():
+        request.method == "POST"
+        gpuData = dict(request.form)  
+        product_id = gpuData["product_id"] [0]
+        product_type = gpuData["product_type"] [0]
+        product_sku = gpuDataa["product_sku"] [0]  
+        make = gpuData["make"] [0]  
+        model = gpuData["model"] [0]
+        price = gpuData["price"] [0]
+        quantity = gpuData["quantity"] [0]  
+        with open('data/gpu.csv', mode='a') as file:
+            gpuData = csv.writer(file, delimiter=',') 
+            gpuData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
+        print(gpuData)
+        return render_template("GPU.html", gpuData=gpuData)
+
 @app.route("/GPU") 
 def GPU():  
     return render_template("GPU.html") 
@@ -107,6 +125,23 @@ def readRAM():
         print(ramData) 
         return render_template("ram.html", ramData=ramData) 
 
+@app.route("/updateCPU", methods=["POST"]) 
+def updateRAM():
+        request.method == "POST"
+        ramData = dict(request.form) 
+        product_id = ramData["product_id"] [0]
+        product_type = ramData["product_type"] [0]
+        product_sku = ramDataa["product_sku"] [0]  
+        make = ramData["make"] [0]  
+        model = ramData["model"] [0]
+        price = ramData["price"] [0]
+        quantity = ramData["quantity"] [0]    
+        with open('data/ram.csv', mode='a') as file:
+            ramData = csv.writer(file, delimiter=',') 
+            ramData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
+        print(ramData)
+        return render_template("ram.html", ramData=ramData)
+
 @app.route("/ram")                 
 def ram():                    
     return render_template("ram.html")
@@ -132,6 +167,23 @@ def readPS():
                 first_line = False
         print(psData) 
         return render_template("ps.html", psData=psData) 
+
+@app.route("/updateCPU", methods=["POST"]) 
+def updatePS(): 
+        request.method == "POST" 
+        psData = dict(request.form) 
+        product_id = psData["product_id"] [0]
+        product_type = psData["product_type"] [0]
+        product_sku = psData["product_sku"] [0]  
+        make = psData["make"] [0]  
+        model = psData["model"] [0]
+        price = psData["price"] [0]
+        quantity = psData["quantity"] [0]
+        with open('data/ps.csv', mode='a') as file:
+            psData = csv.writer(file, delimiter=',') 
+            psData.writerow([product_id, product_type, product_sku, make, model, price, quantity])
+        print(psData)
+        return render_template("ps.html", psData=psData)
 
 @app.route("/ps")                
 def ps():                     
